@@ -108,11 +108,7 @@ function Footer() {
 }
 
 function Button(text) {
-  return (
-    <button className={`${text.buttonStyle} add-to-cart-button`}>
-      {text.buttonText}
-    </button>
-  );
+  return <button className={text.buttonStyle}>{text.buttonText}</button>;
 }
 
 function App() {
