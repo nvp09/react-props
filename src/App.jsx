@@ -51,7 +51,8 @@ function MainContent() {
           to collaborate with you to tackle your most complex challenges and
           drive your success.
         </p>
-        <Button />
+
+        <Button buttonText="Learn More" buttonStyle="learn-button" />
       </div>
     </main>
   );
@@ -62,33 +63,30 @@ function ProductSection() {
     <section className="product-section">
       <div className="product-section-container">
         <h2 className="product-featured-heading">Featured Products</h2>
+
         <div className="product-card-list">
           <div className="product-card">
-            <img
-              src="https://placehold.co/300x300"
-              alt="The Lorem Ipsum for photos."
-            />
+            <img src="https://placehold.co/300x300" />
             <h3>Premium Bluetooth Headphones</h3>
             <p className="product-price">2,400 Baht</p>
-            <Button />
+            <Button buttonText="Add to Cart" buttonStyle="add-to-cart-button" />
           </div>
+
           <div className="product-card">
-            <img
-              src="https://placehold.co/300x300"
-              alt="The Lorem Ipsum for photos."
-            />
+            <img src="https://placehold.co/300x300" />
             <h3>Classic Leather Watch</h3>
             <p className="product-price">4,000 Baht</p>
-            <Button />
+            <Button buttonText="Add to Cart" buttonStyle="add-to-cart-button" />
           </div>
+
           <div className="product-card">
-            <img
-              src="https://placehold.co/300x300"
-              alt="The Lorem Ipsum for photos."
-            />
+            <img src="https://placehold.co/300x300" />
             <h3>Organic Green Tea</h3>
             <p className="product-price">79.99 Baht</p>
-            <Button />
+            <Button
+              buttonText="Add to Cart"
+              buttonStyle="add-to-cart-button-secondary"
+            />
           </div>
         </div>
       </div>
@@ -104,8 +102,8 @@ function Footer() {
   );
 }
 
-function Button() {
-  return <button className="add-to-cart-button">Add to Cart</button>;
+function Button(props) {
+  return <button className={props.buttonStyle}>{props.buttonText}</button>;
 }
 
 function App() {
